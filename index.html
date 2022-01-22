@@ -40,13 +40,17 @@
         position: absolute;
         height: 100px;
         width: 230px;
-        /* background: white; */
+        opacity: 0;
         top: 50%;
         margin-top: -50px;
         left: 50%;
         margin-left: -115px;
         perspective: 282px;
         transform: scale(1.5);
+        transition: all 1s ease;
+      }
+      .face.show {
+        opacity: 1;
       }
       .glasses {
         transform: rotate(354deg) rotateX(6deg) rotateY(7deg);
@@ -103,7 +107,7 @@
         position: absolute;
         left: 50%;
         top: 0;
-        margin-left: -45px;
+        margin-left: -40px;
         box-sizing: border-box;
         animation-name: mouth;
         animation-duration: 4s;
