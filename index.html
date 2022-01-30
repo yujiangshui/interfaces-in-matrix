@@ -42,7 +42,7 @@
         width: 230px;
         opacity: 0;
         top: 50%;
-        margin-top: -50px;
+        margin-top: -40px;
         left: 50%;
         margin-left: -115px;
         perspective: 282px;
@@ -53,7 +53,7 @@
         opacity: 1;
       }
       .glasses {
-        /* transform: rotate(354deg) rotateX(6deg) rotateY(7deg); */
+        transform: rotate(359deg) rotateX(358deg) rotateY(359deg);
         transform-style: preserve-3d;
       }
       .circle {
@@ -82,14 +82,30 @@
         width: 50px;
         height: 50px;
         position: absolute;
-        top: 50%;
+        /* top: 50%;
         left: 50%;
         margin-top: -25px;
-        margin-left: -25px;
+        margin-left: -25px; */
+        top: 0;
+        left: 0;
         color: #333;
         font-size: 10px;
         text-align: center;
-        transition: all 0.5s ease;
+        /* transition: all 0.5s ease; */
+      }
+      .glasses-connector {
+        width: 50px;
+        height: 80px;
+        border: 5px solid #fff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-left-radius: 120px;
+        border-top-right-radius: 120px;
+        position: absolute;
+        left: 50%;
+        top: 18px;
+        margin-left: -25px;
       }
       .mouth {
         width: 90px;
@@ -105,9 +121,9 @@
         top: 0;
         margin-left: -40px;
         box-sizing: border-box;
-        /* animation-name: mouth;
+        animation-name: mouth;
         animation-duration: 4s;
-        animation-iteration-count: infinite; */
+        animation-iteration-count: infinite;
       }
       .asc-wrapper {
         transform: scale(0.3);
@@ -404,6 +420,7 @@
     </div>
     <div class="face">
       <div class="glasses">
+        <div class="glasses-connector"></div>
         <div class="circle left">
           <div class="eye">
           </div>

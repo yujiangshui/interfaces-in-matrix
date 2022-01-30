@@ -31,3 +31,15 @@ setTimeout(() => {
   document.querySelector(".face").classList.add("show");
   document.querySelector(".asc-wrapper").classList.add("show");
 }, 2000);
+
+// eye interaction
+document.body.addEventListener("mousemove", (e) => {
+  const xPercent = parseInt((e.pageX / window.innerWidth) * 100);
+  const yPercent = parseInt((e.pageY / window.innerHeight) * 100);
+  const eyes = document.querySelectorAll(".eye");
+  for (let index = 0; index < eyes.length; index++) {
+    const eye = eyes[index];
+    eye.style.marginTop = 60 * (yPercent / 100) - 5 + "px";
+    eye.style.marginLeft = 60 * (xPercent / 100) - 5 + "px";
+  }
+});
