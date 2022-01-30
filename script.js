@@ -29,4 +29,5 @@ function matrix() {
 setInterval(matrix, 60);
 setTimeout(() => {
   document.querySelector(".face").classList.add("show");
+  document.querySelector(".asc-wrapper").classList.add("show");
 }, 2000);

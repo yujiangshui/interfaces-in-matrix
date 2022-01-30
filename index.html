@@ -91,10 +91,6 @@
         text-align: center;
         transition: all 0.5s ease;
       }
-      .circle:hover .eye {
-        color: #fff;
-        cursor: default;
-      }
       .mouth {
         width: 90px;
         height: 80px;
@@ -122,6 +118,11 @@
         margin-left: -664px;
         width: 100px;
         height: 100px;
+        opacity: 0;
+        transition: all 1s ease;
+      }
+      .asc-wrapper.show {
+        opacity: 1;
       }
       .asc {
         color: green;
@@ -405,12 +406,10 @@
       <div class="glasses">
         <div class="circle left">
           <div class="eye">
-            <div style="margin-top: 4px">Stack<br />Overflow<br />GitHub</div>
           </div>
         </div>
         <div class="circle right">
           <div class="eye" style="font-size: 12px">
-            <div style="margin-top: 10px">Copy<br />Paste</div>
           </div>
         </div>
         <div class="mouth"></div>
