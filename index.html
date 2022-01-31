@@ -5,145 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interfaces in Matrix</title>
-    <style>
-      @keyframes circle {
-        0% {
-          top: 0;
-        }
-        50% {
-          top: 10px;
-        }
-        100% {
-          top: 0;
-        }
-      }
-      @keyframes mouth {
-        0% {
-          top: 0;
-        }
-        50% {
-          top: 8px;
-        }
-        100% {
-          top: 0;
-        }
-      }
-      body {
-        background: #222;
-        padding: 0;
-        height: 100vh;
-        width: 100vw;
-        font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
-          "Helvetica", "Arial", sans-serif;
-      }
-      .face {
-        position: absolute;
-        height: 100px;
-        width: 230px;
-        opacity: 0;
-        top: 50%;
-        margin-top: -40px;
-        left: 50%;
-        margin-left: -115px;
-        perspective: 282px;
-        transform: scale(1);
-        transition: all 2s ease;
-      }
-      .face.show {
-        opacity: 1;
-      }
-      .glasses {
-        transform: rotate(359deg) rotateX(358deg) rotateY(359deg);
-        transform-style: preserve-3d;
-      }
-      .circle {
-        border: 10px solid #fff;
-        border-image-slice: 1;
-        border-width: 5px;
-        border-radius: 100px;
-        height: 100px;
-        width: 100px;
-        position: absolute;
-        /* animation-name: circle; */
-        /* animation-duration: 4s; */
-        /* animation-iteration-count: infinite; */
-      }
-      .circle.left {
-        left: 0;
-        top: 0;
-      }
-      .circle.right {
-        left: 130px;
-        top: 0;
-      }
-      .eye {
-        border-radius: 60px;
-        background: #000;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        /* top: 50%;
-        left: 50%;
-        margin-top: -25px;
-        margin-left: -25px; */
-        top: 0;
-        left: 0;
-        color: #333;
-        font-size: 10px;
-        text-align: center;
-        /* transition: all 0.5s ease; */
-      }
-      .glasses-connector {
-        width: 50px;
-        height: 80px;
-        border: 5px solid #fff;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-        border-right-color: transparent;
-        border-top-left-radius: 120px;
-        border-top-right-radius: 120px;
-        position: absolute;
-        left: 50%;
-        top: 18px;
-        margin-left: -25px;
-      }
-      .mouth {
-        width: 90px;
-        height: 80px;
-        border: 20px solid #000;
-        border-top-color: transparent;
-        border-left-color: transparent;
-        border-right-color: transparent;
-        border-bottom-left-radius: 120px;
-        border-bottom-right-radius: 120px;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        margin-left: -40px;
-        box-sizing: border-box;
-        animation-name: mouth;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-      }
-      .asc-wrapper {
-        transform: scale(0.3);
-        position: absolute;
-        top: 50%;
-        margin-top: -393px;
-        left: 50%;
-        margin-left: -664px;
-        width: 100px;
-        height: 100px;
-        opacity: 0;
-        transition: all 1s ease;
-      }
-      .asc-wrapper.show {
-        opacity: 1;
-      }
-      .asc {
-        color: green;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <canvas id="canvas"></canvas>
@@ -422,12 +284,16 @@
       <div class="glasses">
         <div class="glasses-connector"></div>
         <div class="circle left">
+          <div class="light"></div>
           <div class="eye">
           </div>
+          <div class="text" style="top: 20px;">Stack<br/>Overflow<br/>GitHub</div>
         </div>
         <div class="circle right">
+          <div class="light"></div>
           <div class="eye" style="font-size: 12px">
           </div>
+          <div class="text">Copy<br/>Paste</div>
         </div>
         <div class="mouth"></div>
       </div>
